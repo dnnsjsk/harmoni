@@ -3,7 +3,7 @@
 /**
  * Get class.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 namespace harmoni;
@@ -13,7 +13,7 @@ class get {
 	/**
 	 * Render head.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function head() {

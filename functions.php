@@ -3,7 +3,7 @@
 /**
  * Exit if accessed directly.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Make sure Timber is not active.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 if ( get_option( 'harmoni_twig' ) ) {
@@ -23,7 +23,7 @@ if ( get_option( 'harmoni_twig' ) ) {
 /**
  * Require files.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/init.php';

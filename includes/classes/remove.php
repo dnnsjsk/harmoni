@@ -3,7 +3,7 @@
 /**
  * Remove class.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 namespace harmoni;
@@ -13,7 +13,7 @@ class remove {
 	/**
 	 * Remove jQuery.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function jquery() {
@@ -31,7 +31,7 @@ class remove {
 	/**
 	 * Remove Embed.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function embed() {
@@ -47,7 +47,7 @@ class remove {
 	/**
 	 * Remove emojis.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function emojis() {

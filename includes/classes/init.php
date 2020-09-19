@@ -3,7 +3,7 @@
 /**
  * Init class.
  *
- * @since 0.1
+ * @since 0.01
  */
 
 namespace harmoni;
@@ -13,7 +13,7 @@ class init {
 	/**
 	 * Initialise Twig.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function twig() {
@@ -29,7 +29,7 @@ class init {
 	/**
 	 * Automatically enqueue CSS file.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function css() {
@@ -50,7 +50,7 @@ class init {
 	/**
 	 * Load fav icon.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function favIcon() {
@@ -76,7 +76,7 @@ class init {
 	/**
 	 * Body class page slug.
 	 *
-	 * @since 0.1
+	 * @since 0.01
 	 */
 
 	public static function bodyClassSlug() {
