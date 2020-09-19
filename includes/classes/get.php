@@ -28,6 +28,12 @@ class get {
 
 	}
 
+	/**
+	 * Get Inter font.
+	 *
+	 * @since 0.01
+	 */
+
 	public static function inter() {
 
 		add_action( 'wp_head', function () {
