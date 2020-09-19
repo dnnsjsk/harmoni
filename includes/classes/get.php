@@ -35,9 +35,9 @@ class get {
 			echo '<style id="harmoni-font-inter">
 			@font-face {
     		font-family: inter;
-    src: url(" ' . get_template_directory_uri() . '/assets/fonts/inter.woff2") format( "woff2-variations" );
-    font-weight: 1 999;}
-</style> ';
+    		src: url(" ' . get_template_directory_uri() . '/assets/fonts/inter.woff2") format( "woff2-variations" );
+    		font-weight: 1 999;}
+			</style> ';
 
 		} );
 
