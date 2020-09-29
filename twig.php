@@ -59,7 +59,16 @@ if ( class_exists( 'Timber\Site' ) ) {
 
 	add_filter( 'timber/context', function ( $context ) {
 
-		$context['harmoniGetHead'] = \harmoni\get::head();
+		$latest = array(
+			'posts_per_page' => 1,
+			'offset'         => 0,
+			'order'          => 'DESC',
+			'post_type'      => 'post',
+			'post_status'    => 'publish'
+		);
+
+		$context['harmoniHead']       = \harmoni\get::head();
+		$context['harmoniPostLatest'] = new Timber\PostQuery( $latest );
 
 		return $context;
 	} );
