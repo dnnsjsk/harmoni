@@ -6,7 +6,7 @@
  * @since 0.01
  */
 
-$context = Timber::context();
+$context         = Timber::context();
 
 ob_start();
 

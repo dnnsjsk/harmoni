@@ -11,6 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Load composer.
+ *
+ * @since 0.01
+ */
+
+require __DIR__ . '/vendor/autoload.php';
+
+/**
  * Make sure Timber is not active.
  *
  * @since 0.01
