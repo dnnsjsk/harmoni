@@ -69,6 +69,27 @@ class init {
 	}
 
 	/**
+	 * Automatically enqueue JS file.
+	 *
+	 * @since 0.01
+	 */
+
+	public static function js() {
+
+		add_action( 'wp_enqueue_scripts', function () {
+
+			wp_enqueue_style(
+				'harmoni-child-scripts',
+				get_stylesheet_directory_uri() . '/assets/js/scripts.js',
+				array(),
+				filemtime( get_stylesheet_directory() . '/assets/js/scripts.js' ),
+				FALSE );
+
+		} );
+
+	}
+
+	/**
 	 * Load fav icon.
 	 *
 	 * @since 0.01
