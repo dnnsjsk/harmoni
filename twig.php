@@ -80,7 +80,7 @@ if ( class_exists( 'Timber\Site' ) ) {
 	 */
 
 	add_filter( 'timber/twig', function ( $twig ) {
-		
+
 		/** Shuffle. */
 
 		$twig->addFilter( new Timber\Twig_Filter( 'shuffle', function ( $array ) {
