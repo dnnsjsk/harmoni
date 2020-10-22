@@ -1,6 +1,4 @@
-<div style="max-width: 350px">
-    <img src="assets/images/logo.svg" alt="logo" />
-</div>
+<img src="assets/images/logo.svg" alt="logo" "/>
 
 # Harmoni
 A stripped down starter theme for WordPress developers.
