@@ -27,6 +27,31 @@ class init {
 	}
 
 	/**
+	 * Automatically enqueue CSS file.
+	 *
+	 * @since 0.01
+	 */
+
+	public static function css() {
+
+		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
+
+			add_action( 'wp_enqueue_scripts', function () {
+
+				wp_enqueue_style(
+					'harmoni-child-style',
+					get_stylesheet_directory_uri() . '/assets/css/style.css',
+					array(),
+					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ),
+					FALSE );
+
+			} );
+
+		}
+
+	}
+
+	/**
 	 * Automatically enqueue CSS resets.
 	 *
 	 * @since 0.01
@@ -48,27 +73,6 @@ class init {
 	}
 
 	/**
-	 * Automatically enqueue CSS file.
-	 *
-	 * @since 0.01
-	 */
-
-	public static function css() {
-
-		add_action( 'wp_enqueue_scripts', function () {
-
-			wp_enqueue_style(
-				'harmoni-child-style',
-				get_stylesheet_directory_uri() . '/assets/css/style.css',
-				array(),
-				filemtime( get_stylesheet_directory() . '/assets/css/style.css' ),
-				FALSE );
-
-		} );
-
-	}
-
-	/**
 	 * Automatically enqueue JS file.
 	 *
 	 * @since 0.01
@@ -76,16 +80,20 @@ class init {
 
 	public static function js() {
 
-		add_action( 'wp_enqueue_scripts', function () {
+		if ( file_exists( get_stylesheet_directory() . '/assets/js/scripts.js' ) ) {
 
-			wp_enqueue_script(
-				'harmoni-child-scripts',
-				get_stylesheet_directory_uri() . '/assets/js/scripts.js',
-				array(),
-				filemtime( get_stylesheet_directory() . '/assets/js/scripts.js' ),
-				TRUE );
+			add_action( 'wp_enqueue_scripts', function () {
 
-		} );
+				wp_enqueue_script(
+					'harmoni-child-scripts',
+					get_stylesheet_directory_uri() . '/assets/js/scripts.js',
+					array(),
+					filemtime( get_stylesheet_directory() . '/assets/js/scripts.js' ),
+					TRUE );
+
+			} );
+
+		}
 
 	}
 

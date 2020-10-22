@@ -1,58 +1,54 @@
 <?php
 
-/**
- * Sets the directories to find .twig files.
- */
+if ( class_exists( 'Timber\Site' ) ) {
 
-Timber::$dirname = array( 'templates', 'views' );
-
-/**
- * Autoescaping.
- */
-
-Timber::$autoescape = FALSE;
-
-/**
- * Timber StarterSite class.
- */
-class HarmoniTwig extends Timber\Site {
-
-	/** Add timber support. */
-
-	public function __construct() {
-		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
-		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
-		parent::__construct();
-	}
-
-	/** This is where you add some context
-	 *
-	 * @param string $context context['this'] Being the Twig's {{ this }}.
-	 *
-	 * @return string
+	/**
+	 * Sets the directories to find .twig files.
 	 */
 
-	public function add_to_context( $context ) {
-		$context['site'] = $this;
+	Timber::$dirname = array( 'templates', 'views' );
 
-		return $context;
+	/**
+	 * Autoescaping.
+	 */
+
+	Timber::$autoescape = FALSE;
+
+	/**
+	 * Timber StarterSite class.
+	 */
+	class HarmoniTwig extends Timber\Site {
+
+		/** Add timber support. */
+
+		public function __construct() {
+			add_filter( 'timber/context', array( $this, 'add_to_context' ) );
+			add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
+			parent::__construct();
+		}
+
+		/** This is where you add some context
+		 *
+		 * @param string $context context['this'] Being the Twig's {{ this }}.
+		 *
+		 * @return string
+		 */
+
+		public function add_to_context( $context ) {
+			$context['site'] = $this;
+
+			return $context;
+		}
+
+		public function add_to_twig( $twig ) {
+			$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
+
+			return $twig;
+		}
+
 	}
 
-	public function add_to_twig( $twig ) {
-		$twig->addExtension( new Twig\Extension\StringLoaderExtension() );
-
-		return $twig;
-	}
-
-}
-
-new HarmoniTwig();
-
-/**
- * Extensions.
- */
-
-if ( class_exists( 'Timber\Site' ) ) {
+	new HarmoniTwig();
 
 	/**
 	 * Add contexts.
@@ -68,9 +64,9 @@ if ( class_exists( 'Timber\Site' ) ) {
 			'post_status'    => 'publish'
 		);
 
-		$context['harmoniHead']        = \harmoni\get::head();
-		$context['harmoniPostLatest']  = new Timber\PostQuery( $latest );
-		$context['harmoniCurrentYear'] = date( 'Y' );
+		$context['head']        = \harmoni\get::head();
+		$context['postLatest']  = new Timber\PostQuery( $latest );
+		$context['currentYear'] = date( 'Y' );
 
 		return $context;
 	} );
