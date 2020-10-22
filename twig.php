@@ -76,14 +76,36 @@ if ( class_exists( 'Timber\Site' ) ) {
 	} );
 
 	/**
-	 * Add Markdown.
+	 * Add custom filters.
 	 */
 
 	add_filter( 'timber/twig', function ( $twig ) {
+
+		/** Markdown. */
+
 		$twig->addFilter( new Timber\Twig_Filter( 'markdown', function ( $content ) {
 			$parser = new Parsedown();
 
 			return $parser->text( $content );
+		} ) );
+
+		/** Shuffle. */
+
+		$twig->addFilter( new Timber\Twig_Filter( 'shuffle', function ( $array ) {
+			shuffle( $array );
+			$newArray = [];
+
+			foreach ( $array as $item ) {
+				array_push( $newArray, $item );
+			}
+
+			return $newArray;
+		} ) );
+
+		/** Slugify. */
+
+		$twig->addFilter( new Timber\Twig_Filter( 'slugify', function( $title ) {
+			return sanitize_title( $title );
 		} ) );
 
 		return $twig;

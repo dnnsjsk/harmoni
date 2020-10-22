@@ -78,12 +78,12 @@ class init {
 
 		add_action( 'wp_enqueue_scripts', function () {
 
-			wp_enqueue_style(
+			wp_enqueue_script(
 				'harmoni-child-scripts',
 				get_stylesheet_directory_uri() . '/assets/js/scripts.js',
 				array(),
 				filemtime( get_stylesheet_directory() . '/assets/js/scripts.js' ),
-				FALSE );
+				TRUE );
 
 		} );
 
