@@ -80,15 +80,7 @@ if ( class_exists( 'Timber\Site' ) ) {
 	 */
 
 	add_filter( 'timber/twig', function ( $twig ) {
-
-		/** Markdown. */
-
-		$twig->addFilter( new Timber\Twig_Filter( 'markdown', function ( $content ) {
-			$parser = new Parsedown();
-
-			return $parser->text( $content );
-		} ) );
-
+		
 		/** Shuffle. */
 
 		$twig->addFilter( new Timber\Twig_Filter( 'shuffle', function ( $array ) {
@@ -104,7 +96,7 @@ if ( class_exists( 'Timber\Site' ) ) {
 
 		/** Slugify. */
 
-		$twig->addFilter( new Timber\Twig_Filter( 'slugify', function( $title ) {
+		$twig->addFilter( new Timber\Twig_Filter( 'slugify', function ( $title ) {
 			return sanitize_title( $title );
 		} ) );
 
