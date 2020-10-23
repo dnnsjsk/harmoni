@@ -1,7 +1,7 @@
 ![logo](assets/images/logoGithub.svg)
 
 # Introduction
-Harmoni is a featured packed WordPress theme, that is meant be used as a parent when developing. Every option available is completely opt-in, making sure your site build isn't getting flooded with performance bottlenecks.
+Harmoni is a featured packed WordPress theme, that is meant be used as a parent when developing. Every option available is completely opt-in, making sure your site build isn't getting flooded with unnecessary performance bottlenecks.
 
 Besides, a healthy dose of practical PHP helpers, there are various Twig add-ons available to make life easier using [Upstatements Timber plugin](https://www.upstatement.com/timber/).
 
@@ -95,7 +95,10 @@ Harmoni adds various little Twig goodies to make developing faster and more effi
 ## Filters
 [Filters](https://timber.github.io/docs/v2/guides/filters/#general-filters) are used to modify content.
 
-Usage: ```{{ source|filter }}```
+Usage: 
+```twig
+{{ source|filter }}
+```
 
 ### shuffle
 Shuffles an array using PHPs [shuffle](https://www.php.net/manual/en/function.shuffle.php) function.
@@ -106,7 +109,10 @@ Slugifies a string, e.g. *I am a string* -> *i-am-a-string*
 ## Global variables
 Variables in the [global context](https://timber.github.io/docs/v2/guides/context/) are used to get content dynamic content.
 
-Usage: ```{{ variable }}```
+Usage: 
+```twig
+{{ variable }}
+```
 
 ### head
 Outputs the harmoni\get::head class.
