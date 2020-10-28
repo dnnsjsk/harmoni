@@ -6,9 +6,9 @@
  * @since 0.01
  */
 
-namespace harmoni;
+namespace Harmoni;
 
-class remove {
+class Remove {
 
 	/**
 	 * Remove jQuery.

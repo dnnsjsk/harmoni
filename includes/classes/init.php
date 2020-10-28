@@ -6,9 +6,9 @@
  * @since 0.01
  */
 
-namespace harmoni;
+namespace Harmoni;
 
-class init {
+class Init {
 
 	/**
 	 * Initialise Twig.
@@ -32,7 +32,7 @@ class init {
 	 * @since 0.01
 	 */
 
-	public static function css() {
+	public static function Css() {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
 

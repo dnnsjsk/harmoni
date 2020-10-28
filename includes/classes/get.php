@@ -6,9 +6,9 @@
  * @since 0.01
  */
 
-namespace harmoni;
+namespace Harmoni;
 
-class get {
+class Get {
 
 	/**
 	 * Render head.
