@@ -20,10 +20,6 @@ class Init {
 
 		require_once get_template_directory() . '/twig.php';
 
-		if ( get_option( 'harmoni_twig' ) === FALSE ) {
-			update_option( 'harmoni_twig', TRUE );
-		}
-
 	}
 
 	/**

@@ -6,13 +6,14 @@
  * @since 0.01
  */
 
-?>
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+	the_content();
+endwhile;
+else: ?>
+    <p>Sorry, no posts matched your criteria.</p>
+<?php endif;
 
-<?php if ( get_option( 'harmoni_twig' ) === FALSE ) : ?>
-
-<?php else : ?>
-
-	<?php
+if ( class_exists( 'Timber\Site' ) ) {
 
 	$context = Timber::context();
 
@@ -25,6 +26,4 @@
 
 	Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
 
-	?>
-
-<?php endif; ?>
+} ?>
