@@ -28,11 +28,36 @@ class Init {
 	 * @since 0.01
 	 */
 
-	public static function Css() {
+	public static function css() {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
 
 			add_action( 'wp_enqueue_scripts', function () {
+
+				wp_enqueue_style(
+					'harmoni-child-style',
+					get_stylesheet_directory_uri() . '/assets/css/style.css',
+					array(),
+					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ),
+					FALSE );
+
+			} );
+
+		}
+
+	}
+
+	/**
+	 * Automatically enqueue CSS file in editor.
+	 *
+	 * @since 0.01
+	 */
+
+	public static function cssEditor() {
+
+		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
+
+			add_action( 'enqueue_block_editor_assets', function () {
 
 				wp_enqueue_style(
 					'harmoni-child-style',
