@@ -29,3 +29,5 @@ if ( get_option( 'harmoni_twig' ) ) {
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/init.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/get.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/remove.php';
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/functions/get.php';

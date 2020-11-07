@@ -64,7 +64,6 @@ if ( class_exists( 'Timber\Site' ) ) {
 			'post_status'    => 'publish'
 		);
 
-		$context['head']        = \harmoni\get::head();
 		$context['postLatest']  = new Timber\PostQuery( $latest );
 		$context['currentYear'] = date( 'Y' );
 
