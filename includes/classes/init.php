@@ -57,7 +57,7 @@ class Init {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
 
-			add_action( 'enqueue_block_editor_assets', function () {
+			add_action( 'enqueue_block_assets', function () {
 
 				wp_enqueue_style(
 					'harmoni-child-style',
