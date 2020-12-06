@@ -38,8 +38,7 @@ class Init {
 					'harmoni-child-style',
 					get_stylesheet_directory_uri() . '/assets/css/style.css',
 					array(),
-					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ),
-					FALSE );
+					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ) );
 
 			} );
 
@@ -63,8 +62,7 @@ class Init {
 					'harmoni-child-style',
 					get_stylesheet_directory_uri() . '/assets/css/style.css',
 					array(),
-					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ),
-					FALSE );
+					filemtime( get_stylesheet_directory() . '/assets/css/style.css' ) );
 
 			} );
 
@@ -86,8 +84,7 @@ class Init {
 				'harmoni-resets',
 				get_template_directory_uri() . '/assets/css/style.css',
 				array(),
-				filemtime( get_template_directory() . '/assets/css/style.css' ),
-				FALSE );
+				filemtime( get_template_directory() . '/assets/css/style.css' ) );
 
 		} );
 
