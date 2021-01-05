@@ -71,26 +71,6 @@ class Init {
 	}
 
 	/**
-	 * Automatically enqueue CSS resets.
-	 *
-	 * @since 0.01
-	 */
-
-	public static function resets() {
-
-		add_action( 'wp_enqueue_scripts', function () {
-
-			wp_enqueue_style(
-				'harmoni-resets',
-				get_template_directory_uri() . '/assets/css/style.css',
-				array(),
-				filemtime( get_template_directory() . '/assets/css/style.css' ) );
-
-		} );
-
-	}
-
-	/**
 	 * Automatically enqueue JS file.
 	 *
 	 * @since 0.01
