@@ -64,8 +64,11 @@ if ( class_exists( 'Timber\Site' ) ) {
 			'post_status'    => 'publish'
 		);
 
-		$context['postLatest']  = new Timber\PostQuery( $latest );
-		$context['currentYear'] = date( 'Y' );
+		$context['postLatest']   = new Timber\PostQuery( $latest );
+		$context['currentYear']  = date( 'Y' );
+		$context['pluginRoot']   = plugins_url();
+		$context['themeRoot']    = get_theme_root();
+		$context['themeRootUri'] = get_theme_root_uri();
 
 		return $context;
 	} );
