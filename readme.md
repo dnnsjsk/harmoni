@@ -15,7 +15,7 @@ Installing Harmoni is easy, simply download the repo as a .zip and install it in
 Some functions will attempt to load a file from your child theme, for example a stylesheet or favicons. All of those files should be located within the /assets folder of your child theme root.
 
 ## Applying settings
-Settings are applied using the [*init* WordPress hook](https://developer.wordpress.org/reference/hooks/init/).
+Settings are applied using the [init WordPress hook](https://developer.wordpress.org/reference/hooks/init/).
 
 ## Classes
 All PHP classes are namespaced with *harmoni*. An example configuration can look like this:
