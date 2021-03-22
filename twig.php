@@ -56,6 +56,8 @@ if ( class_exists( 'Timber\Site' ) ) {
 
 	add_filter( 'timber/context', function ( $context ) {
 
+		global $wp;
+
 		$latest = array(
 			'posts_per_page' => 1,
 			'offset'         => 0,
@@ -65,6 +67,7 @@ if ( class_exists( 'Timber\Site' ) ) {
 		);
 
 		$context['postLatest']   = new Timber\PostQuery( $latest );
+		$context['currentUrl'] = home_url( $wp->request );
 		$context['currentYear']  = date( 'Y' );
 		$context['pluginRoot']   = plugins_url();
 		$context['themeRoot']    = get_theme_root();
