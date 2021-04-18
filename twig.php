@@ -67,7 +67,7 @@ if ( class_exists( 'Timber\Site' ) ) {
 		);
 
 		$context['postLatest']   = new Timber\PostQuery( $latest );
-		$context['currentUrl'] = home_url( $wp->request );
+		$context['currentUrl']   = home_url( $wp->request );
 		$context['currentYear']  = date( 'Y' );
 		$context['pluginRoot']   = plugins_url();
 		$context['themeRoot']    = get_theme_root();
@@ -101,7 +101,14 @@ if ( class_exists( 'Timber\Site' ) ) {
 			return sanitize_title( $title );
 		} ) );
 
+		/** Current URL. */
+
+		$twig->addFilter( new \Twig_SimpleFilter( 'is_current_url', function ( $link ) {
+			return ( URLHelper::get_current_url() == $link ) ? TRUE : FALSE;
+		} ) );
+
 		return $twig;
+
 	} );
 
 }
