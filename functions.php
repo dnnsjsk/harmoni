@@ -5,7 +5,6 @@
  *
  * @since 0.01
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -15,7 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 0.01
  */
-
 if ( get_option( 'harmoni_twig' ) ) {
 	delete_option( 'harmoni_twig' );
 }
@@ -25,7 +23,6 @@ if ( get_option( 'harmoni_twig' ) ) {
  *
  * @since 0.01
  */
-
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/init.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/get.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/classes/remove.php';

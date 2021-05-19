@@ -15,7 +15,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function jquery() {
 
 		add_action( 'wp_enqueue_scripts', function () {
@@ -33,7 +32,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function embed() {
 
 		add_action( 'wp_enqueue_scripts', function () {
@@ -49,7 +47,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function emojis() {
 
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -86,7 +83,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function gutenberg()
 	{
 		add_action('wp_enqueue_scripts', function () {
@@ -99,7 +95,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function extraRss()
 	{
 		add_filter('feed_links_show_comments_feed', '__return_false');
@@ -110,7 +105,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function recentCommentsCss()
 	{
 		add_filter('show_recent_comments_widget_style', '__return_false');
@@ -121,7 +115,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function galleryCss()
 	{
 		add_filter('use_default_gallery_style', '__return_false');
@@ -132,7 +125,6 @@ class Remove {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function wordpress()
 	{
 		add_filter('the_generator', '__return_false');

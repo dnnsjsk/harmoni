@@ -5,13 +5,11 @@ if ( class_exists( 'Timber\Site' ) ) {
 	/**
 	 * Sets the directories to find .twig files.
 	 */
-
 	Timber::$dirname = array( 'templates', 'views' );
 
 	/**
 	 * Autoescaping.
 	 */
-
 	Timber::$autoescape = FALSE;
 
 	/**
@@ -19,8 +17,9 @@ if ( class_exists( 'Timber\Site' ) ) {
 	 */
 	class HarmoniTwig extends Timber\Site {
 
-		/** Add timber support. */
-
+		/**
+		 * Add timber support.
+		 */
 		public function __construct() {
 			add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 			add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
@@ -33,7 +32,6 @@ if ( class_exists( 'Timber\Site' ) ) {
 		 *
 		 * @return string
 		 */
-
 		public function add_to_context( $context ) {
 			$context['site'] = $this;
 
@@ -53,7 +51,6 @@ if ( class_exists( 'Timber\Site' ) ) {
 	/**
 	 * Add contexts.
 	 */
-
 	add_filter( 'timber/context', function ( $context ) {
 
 		global $wp;
@@ -79,11 +76,11 @@ if ( class_exists( 'Timber\Site' ) ) {
 	/**
 	 * Add custom filters.
 	 */
-
 	add_filter( 'timber/twig', function ( $twig ) {
 
-		/** Shuffle. */
-
+		/**
+		 * Shuffle.
+		 */
 		$twig->addFilter( new Timber\Twig_Filter( 'shuffle', function ( $array ) {
 			shuffle( $array );
 			$newArray = [];
@@ -95,14 +92,16 @@ if ( class_exists( 'Timber\Site' ) ) {
 			return $newArray;
 		} ) );
 
-		/** Slugify. */
-
+		/**
+		 * Slugify.
+		 */
 		$twig->addFilter( new Timber\Twig_Filter( 'slugify', function ( $title ) {
 			return sanitize_title( $title );
 		} ) );
 
-		/** Current URL. */
-
+		/**
+		 * Current URL.
+		 */
 		$twig->addFilter( new \Twig_SimpleFilter( 'is_current_url', function ( $link ) {
 			return ( URLHelper::get_current_url() == $link ) ? TRUE : FALSE;
 		} ) );

@@ -5,7 +5,6 @@
  *
  * @since 0.01
  */
-
 namespace Harmoni;
 
 class Init {
@@ -15,7 +14,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function twig() {
 
 		require_once get_template_directory() . '/twig.php';
@@ -27,7 +25,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function css() {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
@@ -51,7 +48,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function cssEditor() {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/css/style.css' ) ) {
@@ -75,7 +71,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function js() {
 
 		if ( file_exists( get_stylesheet_directory() . '/assets/js/scripts.js' ) ) {
@@ -100,7 +95,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function favIcon() {
 
 		add_action( 'admin_head', function () {
@@ -126,7 +120,6 @@ class Init {
 	 *
 	 * @since 0.01
 	 */
-
 	public static function bodyClassSlug() {
 
 		add_filter( 'body_class', function ( $classes ) {

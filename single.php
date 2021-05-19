@@ -5,7 +5,6 @@
  *
  * @since 0.01
  */
-
 if ( class_exists( 'Timber\Site' ) ) {
 
 	$context = Timber::context();
